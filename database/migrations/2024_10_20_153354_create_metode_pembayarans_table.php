@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('laporans', function (Blueprint $table): void {
+        Schema::create('metode_pembayarans', function (Blueprint $table): void {
             $table->id();
-            $table->string('tgl_mulai_laporan');
-            $table->string('tgl_akhir_laporan');
-            $table->string('total_pendapatan');
-            $table->string('total_transaksi');
+            $table->enum('pembayaran', ['tunai', 'transfer']);
+            $table->enum('status_pembayaran', ['lunas', 'belum_lunas']);
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('laporans');
+        Schema::dropIfExists('metode_pembayarans');
     }
 };

@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\laporan;
+use App\Models\metodepembayaran;
 use Illuminate\Http\Request;
 
-class LaporanController extends Controller
+class MetodePembayaranController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Laporan::all();
+        $data = MetodePembayaran::all();
 
         return response()->json($data);
     }
@@ -36,7 +36,7 @@ class LaporanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(laporan $laporan)
+    public function show(metodepembayaran $metodepembayaran)
     {
         //
     }
@@ -44,7 +44,7 @@ class LaporanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(laporan $laporan)
+    public function edit(metodepembayaran $metodepembayaran)
     {
         //
     }
@@ -52,7 +52,7 @@ class LaporanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, laporan $laporan)
+    public function update(Request $request, metodepembayaran $metodepembayaran)
     {
         //
     }
@@ -60,8 +60,9 @@ class LaporanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(laporan $laporan)
+    public function destroy(metodepembayaran $metodepembayaran)
     {
         //
     }
 }
+

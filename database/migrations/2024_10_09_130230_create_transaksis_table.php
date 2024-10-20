@@ -13,15 +13,10 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table): void {
             $table->id();
-            $table->string('user_id');
-            $table->string('customer_id');
-            $table->string('total_berat');
-            $table->string('total_harga');
-            $table->string('status_laundry');
-            $table->string('status_pembayaran');
-            $table->string('metode_pembayaran');
-            $table->string('jumlah_dibayar');
-            $table->string('tanggal_pembayaran');
+            $table->string('id_transaksi');
+            $table->enum('pilihan_laundry', ['laundry_hemat', 'laundry_kilat', 'laundry_komplit', 'laundry_premium']);
+            $table->string('tanggal_masuk');
+            $table->string('tanggal_keluar');
             $table->timestamps();
         });
     }

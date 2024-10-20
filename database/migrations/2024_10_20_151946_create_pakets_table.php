@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jenis_laundries', function (Blueprint $table): void {
+        Schema::create('pakets', function (Blueprint $table): void {
             $table->id();
-            $table->enum('nama_item', ['pakaian', 'sepatu']);
-            $table->string('harga_per_kg')->unique();
+            $table->string('id_paket');
+            $table->string('nama_laundry');
+            $table->string('harga_laundry');
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jenis_laundries');
+        Schema::dropIfExists('pakets');
     }
 };

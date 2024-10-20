@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\jenislaundry;
+use App\Models\paket;
 use Illuminate\Http\Request;
 
-class JenisLaundryController extends Controller
+class PaketController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = JenisLaundry::all();
+        $data = Paket::all();
 
         return response()->json($data);
     }
@@ -36,7 +36,7 @@ class JenisLaundryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(jenislaundry $jenislaundry)
+    public function show(paket $paket)
     {
         //
     }
@@ -44,7 +44,7 @@ class JenisLaundryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(jenislaundry $jenislaundry)
+    public function edit(paket $paket)
     {
         //
     }
@@ -52,7 +52,7 @@ class JenisLaundryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, jenislaundry $jenislaundry)
+    public function update(Request $request, paket $paket)
     {
         //
     }
@@ -60,8 +60,9 @@ class JenisLaundryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(jenislaundry $jenislaundry)
+    public function destroy(paket $paket)
     {
         //
     }
 }
+
