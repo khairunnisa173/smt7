@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Paket extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nama_laundry',
+        'harga_laundry',
+    ];
+
+    public function transaksi()
+    {
+        return $this->hasMany(Transaksi::class);
+    }
 }

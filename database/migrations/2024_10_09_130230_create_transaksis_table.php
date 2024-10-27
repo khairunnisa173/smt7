@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table): void {
             $table->id();
-            $table->string('id_transaksi');
             $table->enum('pilihan_laundry', ['laundry_hemat', 'laundry_kilat', 'laundry_komplit', 'laundry_premium']);
             $table->string('tanggal_masuk');
             $table->string('tanggal_keluar');
